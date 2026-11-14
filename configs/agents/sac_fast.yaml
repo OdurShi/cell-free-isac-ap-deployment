@@ -1,0 +1,15 @@
+# SAC with a larger learning rate (3e-4) for short CPU runs such as `cfisac demo`.
+# All other values equal configs/agents/sac.yaml (Table 1).
+algo: sac
+hidden_sizes: [64, 32]
+learning_rate: 3.0e-4
+gamma: 0.98
+tau: 0.005
+clip_grad_norm: 3.0
+reward_scale: 1.0
+horizon_len: 256
+buffer_size: 2097152
+batch_size: 512
+repeat_times: 1.0
+learning_starts: 1024
+init_temperature: 0.36787944117144233

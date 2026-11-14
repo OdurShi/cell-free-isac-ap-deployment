@@ -1,0 +1,31 @@
+# max-sum problem, 1T1R (M + N = 2)
+# Sensing value and trajectory centre as in the archived experiment logs of the original
+# study (see docs/implementation_notes.md, "Archived variant").
+n_tx: 1
+n_rx: 1
+aggregation: max-sum
+sensing_metric: archived
+
+# Deployment region of Eq. (16), in metres (not stated in the paper; see implementation notes).
+x_min: 0.0
+x_max: 50.0
+y_min: 0.0
+y_max: 50.0
+grid_step: 10.0            # spacing of the candidate AP sites (discretised action space)
+
+# Target on a circular trajectory (Section 4), sampled at Q points.
+target_center: [25.05, 25.05]
+target_radius: 10.0
+n_trajectory_points: 25
+trajectory_endpoint: true
+
+# Three UEs, Gaussian with variance 2 (Section 4) around these centres.
+ue_centers: [[25.0, 45.0], [10.0, 15.0], [40.0, 10.0]]
+ue_variance: 2.0
+
+log_base: 10.0             # base of the logarithm in Eq. (15)
+one_plus_snr: true         # log(1 + SNR), first line of Eq. (15)
+objective: isac            # Eq. (17); alternatives: sensing | communication | weighted
+weight: 0.5
+reward_scale: 1.0
+episode_length: 256

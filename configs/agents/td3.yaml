@@ -1,0 +1,18 @@
+# TD3 baseline. Shared values from experiments/td3/*/seed-*/hyperparameter.json.
+algo: td3
+hidden_sizes: [64, 32]     # Table 1 / archive "net_dims"
+learning_rate: 1.0e-5      # Table 1
+gamma: 0.98                # Table 1
+tau: 0.005                 # Table 1 / archive "soft_update_tau"
+clip_grad_norm: 3.0        # archive
+reward_scale: 1.0          # archive
+horizon_len: 256           # archive
+buffer_size: 2097152
+batch_size: 512
+# Not stated in the paper or the archive:
+repeat_times: 1.0
+learning_starts: 1024
+explore_noise_std: 0.1
+policy_noise_std: 0.2
+policy_noise_clip: 0.5
+policy_delay: 2

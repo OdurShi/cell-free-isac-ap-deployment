@@ -1,0 +1,90 @@
+{
+  "generator": "cfisac.data.generate (scripts/generate_data.py)",
+  "numpy_version": "2.4.6",
+  "ue_distribution": {
+    "ue_centers": [
+      [
+        25.0,
+        45.0
+      ],
+      [
+        10.0,
+        15.0
+      ],
+      [
+        40.0,
+        10.0
+      ]
+    ],
+    "ue_variance": 2.0,
+    "clip_low": [
+      -10.0,
+      -10.0
+    ],
+    "clip_high": [
+      60.0,
+      60.0
+    ]
+  },
+  "files": {
+    "ue_positions_train.npy": {
+      "split": "train",
+      "seed": 1,
+      "shape": [
+        409600,
+        3,
+        2
+      ],
+      "dtype": "float32",
+      "snapshots": 409600,
+      "steps_of_25_snapshots": 16384,
+      "bytes": 9830528,
+      "sha256": "de410ac91d3734fb25d5af9c71529de6e85725e51a00c5690628a034f55e33c4"
+    },
+    "ue_positions_eval.npy": {
+      "split": "eval",
+      "seed": 0,
+      "shape": [
+        32768,
+        3,
+        2
+      ],
+      "dtype": "float64",
+      "snapshots": 32768,
+      "steps_of_25_snapshots": 1310,
+      "bytes": 1572992,
+      "sha256": "34c38d7043b0ba7e7b4dd4a19cd3da372dd5044c05f40e2b61336abec8007e9b"
+    },
+    "trajectory_eq8.csv": {
+      "points": 25,
+      "center": [
+        25.0,
+        25.0
+      ],
+      "radius": 10.0,
+      "bytes": 1301,
+      "sha256": "ed822fe2bd108508dcd22eb59f98ff42e40a695626ab23dc034e3227ce2573f1"
+    },
+    "trajectory_archived.csv": {
+      "points": 25,
+      "center": [
+        25.05,
+        25.05
+      ],
+      "radius": 10.0,
+      "bytes": 1337,
+      "sha256": "42707bb1df067972b9236d1482c2ce6059c064a0806eac879634de8b3996daa1"
+    },
+    "candidate_sites.csv": {
+      "sites": 36,
+      "grid_step": 10.0,
+      "bytes": 460,
+      "sha256": "3f4d2aaef3296d33cbeedbf44c510f180712ec1aff60585c4087e4cc1359dd4d"
+    },
+    "ue_centers.csv": {
+      "users": 3,
+      "bytes": 47,
+      "sha256": "536895646d86e275b3efe1ad0ac38f4ed6574743b8390695a38a73cbd3234c23"
+    }
+  }
+}

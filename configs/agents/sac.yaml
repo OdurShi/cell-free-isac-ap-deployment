@@ -1,0 +1,16 @@
+# SAC, the paper's method (Section 3.2). Values of Table 1; identical to the archived
+# experiments/sac/*/seed-*/hyperparameter.json.
+algo: sac
+hidden_sizes: [64, 32]     # Table 1 / archive "net_dims"
+learning_rate: 1.0e-5      # Table 1
+gamma: 0.98                # Table 1
+tau: 0.005                 # Table 1 / archive "soft_update_tau"
+clip_grad_norm: 3.0        # archive
+reward_scale: 1.0          # archive
+horizon_len: 256           # archive
+buffer_size: 2097152       # 2^21, Table 1
+batch_size: 512            # 2^9, Table 1
+# Not stated in the paper or the archive (see docs/implementation_notes.md):
+repeat_times: 1.0          # gradient steps per environment step
+learning_starts: 1024      # uniformly random actions before learning
+init_temperature: 0.36787944117144233   # exp(-1)

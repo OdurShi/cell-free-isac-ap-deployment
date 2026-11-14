@@ -1,0 +1,76 @@
+{
+  "agent": {
+    "algo": "sac",
+    "hidden_sizes": [
+      64,
+      32
+    ],
+    "learning_rate": 1e-05,
+    "buffer_size": 2097152,
+    "batch_size": 512,
+    "gamma": 0.98,
+    "tau": 0.005,
+    "clip_grad_norm": 3.0,
+    "reward_scale": 1.0,
+    "horizon_len": 256,
+    "repeat_times": 1.0,
+    "learning_starts": 1024,
+    "init_temperature": 0.36787944117144233,
+    "target_entropy": null,
+    "explore_noise_std": 0.1,
+    "policy_noise_std": 0.2,
+    "policy_noise_clip": 0.5,
+    "policy_delay": 2,
+    "gae_lambda": 0.95,
+    "clip_ratio": 0.25,
+    "entropy_coef": 0.01
+  },
+  "scenario": {
+    "n_tx": 2,
+    "n_rx": 2,
+    "x_min": 0.0,
+    "x_max": 50.0,
+    "y_min": 0.0,
+    "y_max": 50.0,
+    "grid_step": 10.0,
+    "target_center": [
+      25.05,
+      25.05
+    ],
+    "target_radius": 10.0,
+    "n_trajectory_points": 25,
+    "trajectory_endpoint": true,
+    "ue_centers": [
+      [
+        25.0,
+        45.0
+      ],
+      [
+        10.0,
+        15.0
+      ],
+      [
+        40.0,
+        10.0
+      ]
+    ],
+    "ue_variance": 2.0,
+    "log_base": 10.0,
+    "one_plus_snr": true,
+    "sensing_metric": "archived",
+    "aggregation": "max-sum",
+    "objective": "isac",
+    "weight": 0.5,
+    "reward_scale": 1.0,
+    "episode_length": 256,
+    "obs_margin": 10.0,
+    "min_distance": 1e-09
+  },
+  "train": {
+    "total_steps": 163840,
+    "eval_interval": 5120,
+    "eval_episodes": 2,
+    "seed": 1,
+    "torch_threads": 1
+  }
+}

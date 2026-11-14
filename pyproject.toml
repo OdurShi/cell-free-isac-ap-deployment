@@ -1,0 +1,70 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cfisac"
+version = "1.0.0"
+description = "Official implementation of 'Access Point Deployment for Localizing Accuracy and User Rate in Cell-Free Systems' (ACM MobiCom '24)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Fanfei Xu" },
+  { name = "Shengheng Liu" },
+  { name = "Zihuan Mao" },
+  { name = "Shangqing Shi" },
+  { name = "Dazhuan Xu" },
+  { name = "Dongming Wang" },
+  { name = "Yongming Huang" },
+]
+keywords = [
+  "cell-free",
+  "integrated sensing and communication",
+  "access point deployment",
+  "soft actor-critic",
+  "deep reinforcement learning",
+]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering",
+]
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "torch>=2.1",
+  "gymnasium>=0.29",
+  "matplotlib>=3.7",
+  "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "ruff>=0.4"]
+figures = ["pymupdf>=1.24"]  # only for scripts/extract_paper_figures.py
+
+[project.scripts]
+cfisac = "cfisac.cli:main"
+
+[project.urls]
+Paper = "https://doi.org/10.1145/3636534.3698221"
+Repository = "https://github.com/OdurShi/cell-free-isac-ap-deployment"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+extend-exclude = ["experiments", "results", ".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "NPY"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning"]

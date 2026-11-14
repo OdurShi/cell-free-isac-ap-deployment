@@ -1,0 +1,55 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "cfisac: Access Point Deployment for Localizing Accuracy and User Rate in Cell-Free Systems"
+type: software
+license: MIT
+repository-code: "https://github.com/OdurShi/cell-free-isac-ap-deployment"
+authors:
+  - family-names: Xu
+    given-names: Fanfei
+  - family-names: Liu
+    given-names: Shengheng
+  - family-names: Mao
+    given-names: Zihuan
+  - family-names: Shi
+    given-names: Shangqing
+  - family-names: Xu
+    given-names: Dazhuan
+  - family-names: Wang
+    given-names: Dongming
+  - family-names: Huang
+    given-names: Yongming
+preferred-citation:
+  type: conference-paper
+  title: "Access Point Deployment for Localizing Accuracy and User Rate in Cell-Free Systems"
+  authors:
+    - family-names: Xu
+      given-names: Fanfei
+    - family-names: Liu
+      given-names: Shengheng
+    - family-names: Mao
+      given-names: Zihuan
+    - family-names: Shi
+      given-names: Shangqing
+    - family-names: Xu
+      given-names: Dazhuan
+    - family-names: Wang
+      given-names: Dongming
+    - family-names: Huang
+      given-names: Yongming
+  collection-title: "The 30th Annual International Conference on Mobile Computing and Networking (ACM MobiCom '24)"
+  collection-type: proceedings
+  conference:
+    name: "ACM MobiCom '24"
+    city: "Washington D.C."
+    country: US
+    date-start: 2024-11-18
+    date-end: 2024-11-22
+  publisher:
+    name: "Association for Computing Machinery"
+    city: "New York"
+    region: NY
+    country: US
+  year: 2024
+  doi: "10.1145/3636534.3698221"
+  isbn: "979-8-4007-0489-5"

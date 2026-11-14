@@ -1,9 +1,28 @@
-
+# Python
 __pycache__/
 *.py[cod]
-.DS_Store
-.venv/
-.env
+*.egg-info/
 build/
 dist/
-*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Environments and local settings
+.venv/
+venv/
+.env
+.DS_Store
+.idea/
+.vscode/
+
+# The shipped data (data/) and the paper figures (assets/) are tracked.
+# Run outputs: checkpoints of new runs and quick-start output are not tracked.
+# (The archived checkpoints under experiments/ are part of the repository.)
+results/**/*.pt
+results/demo/
+/runs/
+/outputs/
+/wandb/

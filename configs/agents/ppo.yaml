@@ -1,0 +1,16 @@
+# PPO baseline. Shared values from experiments/ppo/*/seed-*/hyperparameter.json
+# (on-policy: no replay buffer, batch size 1024).
+algo: ppo
+hidden_sizes: [64, 32]     # Table 1 / archive "net_dims"
+learning_rate: 1.0e-5      # Table 1
+gamma: 0.98                # Table 1
+tau: 0.005                 # Table 1 / archive "soft_update_tau"
+clip_grad_norm: 3.0        # archive
+reward_scale: 1.0          # archive
+horizon_len: 256           # archive
+batch_size: 1024
+# Not stated in the paper or the archive:
+repeat_times: 8.0
+gae_lambda: 0.95
+clip_ratio: 0.25
+entropy_coef: 0.01
